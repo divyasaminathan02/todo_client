@@ -25,7 +25,7 @@ const TodoList = () => {
     const postTodo = async () => {
         if(!todo.trim()) return;
         try {
-            await axios.post("http://localhost:5000/csbs/addtodo", { todo });
+            await axios.post("https://todo-server-ec2-3qiz.onrender.com/csbs/addtodo", { todo });
             setTodo('');
             setStatus(true);
             getTodo();
@@ -37,7 +37,7 @@ const TodoList = () => {
 
     const getTodo = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/csbs/gettodo");
+            const response = await axios.get("https://todo-server-ec2-3qiz.onrender.com/csbs/gettodo");
             setTodoArray(response.data);
         } catch (err) {
             console.error(err);
@@ -46,7 +46,7 @@ const TodoList = () => {
 
     const deleteTodo = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/csbs/deletetodo/${id}`);
+            await axios.delete(`https://todo-server-ec2-3qiz.onrender.com/csbs/deletetodo/${id}`);
             getTodo(); 
         } catch(err) {
             console.error(err);
@@ -55,7 +55,7 @@ const TodoList = () => {
 
     const updateTodo = async (id, data) => {
         try {
-            await axios.put(`http://localhost:5000/csbs/updatetodo/${id}`, { todo: data });
+            await axios.put(`https://todo-server-ec2-3qiz.onrender.com/csbs/updatetodo/${id}`, { todo: data });
             getTodo();
         } catch (err) {
             console.error(err);
