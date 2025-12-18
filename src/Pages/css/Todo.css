@@ -1,6 +1,6 @@
 
 
-.todoList {
+.todolist {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,12 +10,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.todoList h1,
-.todoList h3 {
+.todolist h1,
+.todolist h3 {
     color: #2c2c2c;
 }
 
-.todoList h1 {
+.todolist h1 {
     font-size: 3rem;
     margin-bottom: 30px;
     letter-spacing: 1px;
@@ -47,14 +47,14 @@
 
    TODO LIST ITEMS
 
-.todoList ul {
+.todolist ul {
     list-style: none;
     padding: 0;
     width: 500px;
     max-width: 90%;
 }
 
-.todoList li {
+.todolist li {
     background-color: #ffffff;
     margin-bottom: 12px;
     padding: 12px 16px;
@@ -66,12 +66,12 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.todoList li:hover {
+.todolist li:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
 }
 
-.todoList li h3 {
+.todolist li h3 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 500;
